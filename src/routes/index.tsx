@@ -58,8 +58,7 @@ const projects = [
     stats: ["20+ years", "3 regions", "94% R²"],
     tools: "Python · Pandas · scikit-learn · Time Series · Deep Learning · Tableau",
     steps: ["Temporal and seasonal analysis", "Lag features and rolling statistics", "Statistical, ML, and deep learning models", "Rolling-window validation", "Regional and national projections"],
-    insight: "The strongest work was not a single model—it was a repeatable system for comparing methods across regions and communicating uncertainty for planning.",
-    visual: "health",
+    insight: "Compared forecasting approaches across high-burden regions and generated regional and national projections, achieving up to 94% R² while supporting seasonal disease surveillance and healthcare planning.",    visual: "health",
     github: "https://github.com/anvithasatya/IRA-HealthcareAnalytics",
   },
   {
@@ -72,7 +71,7 @@ const projects = [
     stats: ["Forecasting", "Clustering", "Anomaly Detection"],
     tools: "Python · Pandas · Regression · Clustering · Anomaly Detection · Data Mining",
     steps: ["Industrial data preparation", "Consumption pattern exploration", "Regression forecasting", "Operational clustering", "Anomaly detection and interpretation"],
-    insight: "Combining multiple analytical lenses made the result more useful: forecast what comes next, discover operating modes, then detect exceptions.",
+    insight: "Combined forecasting, clustering, and anomaly detection to identify energy-consumption patterns and unusual operating behavior, producing insights that can support energy optimization and more sustainable manufacturing decisions.",
     visual: "energy",
   },
   {
@@ -85,7 +84,7 @@ const projects = [
     stats: ["Classification", "Feature engineering", "Road safety"],
     tools: "Python · Pandas · scikit-learn · Classification · Feature Engineering · EDA",
     steps: ["Data preprocessing", "Exploratory analysis", "Feature engineering", "Model comparison", "Evaluation and factor interpretation"],
-    insight: "Prediction was only part of the value. Interpreting the features turned model performance into evidence that could inform safety decisions.",
+    insight: "Used classification and feature analysis to identify traffic, roadway, and environmental factors associated with collision severity, turning model results into interpretable insights for road-safety analysis.",
     visual: "roads",
   },
 ];
