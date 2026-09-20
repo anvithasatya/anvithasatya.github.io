@@ -130,12 +130,30 @@ const experiences = [
 ];
 
 const skillGroups = [
-  ["Data Science & Analytics", "EDA · Statistical analysis · Predictive modeling · Forecasting · A/B testing · Experimentation"],
-  ["Programming & Data", "Python · SQL · R · C · Pandas · NumPy · scikit-learn · TensorFlow"],
-  ["Databases & Processing", "MySQL · PostgreSQL · Data cleaning · Transformation · Feature engineering"],
-  ["Visualization & BI", "Tableau · Power BI · Matplotlib · Seaborn · Plotly"],
-  ["Cloud & Big Data", "AWS · Apache Spark · Hadoop"],
-  ["Tools", "Git · GitHub · Jupyter · VS Code · Jira · Trello"],
+  [
+    "Data Science & Analytics",
+    "EDA · Statistical Analysis · Predictive Modeling · Time Series Forecasting · A/B Testing · Experimentation",
+  ],
+  [
+    "Machine Learning",
+    "Supervised Learning · Unsupervised Learning · Feature Engineering · Model Evaluation & Tuning · NLP",
+  ],
+  [
+    "Programming & Data",
+    "Python · R · SQL · JavaScript · HTML/CSS · Pandas · NumPy · scikit-learn",
+  ],
+  [
+    "Databases",
+    "PostgreSQL · MySQL · SQLite · Data Cleaning · Data Transformation",
+  ],
+  [
+    "Visualization & BI",
+    "Tableau · Power BI · Excel · Matplotlib · Seaborn · Plotly",
+  ],
+  [
+    "Tools & Development",
+    "Git · GitHub · Jupyter · VS Code · Jira · Linux",
+  ],
 ];
 
 function scrollTo(id: string) {
@@ -312,7 +330,7 @@ function Index() {
 
         <section className="px-5 py-24 md:px-10 lg:px-16 lg:py-32">
           <div className="mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-[.9fr_1.1fr]">
-            <div><SectionLabel index="07" title="Education" /><div className="mt-10 space-y-10"><Education school="University of Oklahoma" degree="Master of Science in Data Science & Analytics" dates="Aug 2024 — May 2026" location="Norman, Oklahoma" metric="4.0 CGPA" /><Education school="CVR College of Engineering" degree="Bachelor of Technology in Computer Science & Engineering" dates="Dec 2020 — Apr 2024" location="Hyderabad, India" /></div></div>
+            <div><SectionLabel index="07" title="Education" /><div className="mt-10 space-y-10"><Education school="University of Oklahoma" degree="Master of Science in Data Science & Analytics" dates="Aug 2024 — May 2026" location="Norman, Oklahoma" metric="GPA 4.0 / 4.0" /><Education school="CVR College of Engineering" degree="Bachelor of Technology in Computer Science & Engineering" dates="Dec 2020 — Apr 2024" location="Hyderabad, India" /></div></div>
             <div className="editorial-grid border border-border bg-surface p-8 md:p-12"><SectionLabel index="08" title="Current direction" /><h2 className="mt-16 max-w-xl font-display text-4xl font-semibold md:text-6xl">What I’m exploring next<span className="text-primary">.</span></h2><p className="mt-8 max-w-xl text-lg leading-8 text-ink-soft">I’m interested in the intersection of data, technology, and products—especially work where analytical thinking can directly influence what gets built and how it gets used.</p><div className="mt-12 flex flex-wrap gap-2">{["Data Science", "Machine Learning", "Analytics", "Product Analytics", "Technical Products"].map((item) => <span key={item} className="bg-background px-3 py-2 font-mono text-[10px] uppercase text-muted-foreground ring-1 ring-border">{item}</span>)}</div></div>
           </div>
         </section>
