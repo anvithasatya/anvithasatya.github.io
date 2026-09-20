@@ -60,6 +60,7 @@ const projects = [
     steps: ["Temporal and seasonal analysis", "Lag features and rolling statistics", "Statistical, ML, and deep learning models", "Rolling-window validation", "Regional and national projections"],
     insight: "The strongest work was not a single model—it was a repeatable system for comparing methods across regions and communicating uncertainty for planning.",
     visual: "health",
+    github: "https://github.com/anvithasatya/IRA-HealthcareAnalytics",
   },
   {
     number: "02",
@@ -274,7 +275,18 @@ function Index() {
                 <ProjectVisual type={project.visual} number={project.number} />
                  <div className="flex flex-col p-7 md:p-10 lg:p-12"><div className="flex items-start justify-between gap-4"><span className="font-mono text-[10px] uppercase text-primary">Project / {project.number}</span><span className="font-mono text-[10px] uppercase text-muted-foreground">{project.category}</span></div><h3 className="mt-10 max-w-2xl font-display text-3xl font-semibold leading-tight md:text-5xl">{project.title}</h3><p className="mt-6 max-w-xl text-base leading-7 text-ink-soft">{project.summary}</p><div className="mt-8 grid grid-cols-3 border-y border-border">{project.stats.map((stat) => <div key={stat} className="py-5 text-center font-mono text-[10px] text-primary not-last:border-r not-last:border-border md:text-xs">{stat}</div>)}</div><div className="mt-auto flex items-end justify-between gap-4 pt-8"><Button variant="outline" onClick={() => setExpanded(expanded === project.number ? null : project.number)} aria-expanded={expanded === project.number}>Explore case study <ChevronDown className={`transition-transform ${expanded === project.number ? "rotate-180" : ""}`} /></Button><span className="hidden font-display text-6xl text-border md:block">{project.number}</span></div></div>
               </div>
-              {expanded === project.number && <div className="grid gap-8 border-t border-border bg-surface p-7 md:grid-cols-3 md:p-10 lg:p-12"><div><p className="font-mono text-[10px] uppercase text-primary">Problem</p><p className="mt-4 text-sm leading-7 text-ink-soft">{project.problem}</p></div><div><p className="font-mono text-[10px] uppercase text-primary">Data → Approach → Evaluation</p><ol className="mt-4 space-y-3">{project.steps.map((step, index) => <li key={step} className="flex gap-3 text-sm text-ink-soft"><span className="font-mono text-[10px] text-primary">0{index + 1}</span>{step}</li>)}</ol></div><div><p className="font-mono text-[10px] uppercase text-primary">Insight / Impact</p><p className="mt-4 text-sm leading-7 text-ink-soft">{project.insight}</p><p className="mt-7 border-t border-border pt-5 font-mono text-[10px] leading-5 text-muted-foreground">{project.tools}</p></div></div>}
+              {expanded === project.number && <div className="grid gap-8 border-t border-border bg-surface p-7 md:grid-cols-3 md:p-10 lg:p-12"><div><p className="font-mono text-[10px] uppercase text-primary">Problem</p><p className="mt-4 text-sm leading-7 text-ink-soft">{project.problem}</p></div><div><p className="font-mono text-[10px] uppercase text-primary">Data → Approach → Evaluation</p><ol className="mt-4 space-y-3">{project.steps.map((step, index) => <li key={step} className="flex gap-3 text-sm text-ink-soft"><span className="font-mono text-[10px] text-primary">0{index + 1}</span>{step}</li>)}</ol></div><div><p className="font-mono text-[10px] uppercase text-primary">Insight / Impact</p><p className="mt-4 text-sm leading-7 text-ink-soft">{project.insight}</p><p className="mt-7 border-t border-border pt-5 font-mono text-[10px] leading-5 text-muted-foreground">{project.tools}</p>{"github" in project && project.github && (
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase text-primary transition-opacity hover:opacity-60"
+  >
+    <Github className="size-4" />
+    View Repository
+    <ArrowUpRight className="size-3" />
+  </a>
+)}</div></div>}
             </article>)}</div>
           </div>
         </section>
