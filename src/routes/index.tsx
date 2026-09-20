@@ -204,7 +204,7 @@ function Index() {
               </h1>
               <p className="mt-8 max-w-2xl text-base leading-8 text-ink-soft md:text-lg">Data Science graduate with a Computer Science background, interested in solving real-world problems through data, experimentation, and thoughtful technology.</p>
               <div className="mt-9 flex flex-wrap items-center gap-5">
-                <Button size="lg" className="rounded-full px-7" onClick={() => scrollTo("projects")}>View my work <ArrowDownRight /></Button>
+                <Button size="lg" className="rounded-full px-7" onClick={() => scrollTo("projects")}>View my work <a href="/Anvitha_Reddy_Resume.pdf" target="_blank" rel="noopener noreferrer"> <Button variant="outline" className="border-white bg-white text-primary hover:bg-white/90 hover:text-primary"> View Resume <ArrowUpRight className="ml-2 h-4 w-4" /> </Button> </a> <ArrowDownRight /></Button>
                 <button onClick={() => scrollTo("about")} className="group inline-flex items-center gap-2 border-b border-foreground pb-1 font-mono text-[10px] uppercase text-foreground transition-colors hover:border-primary hover:text-primary">Read my story <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" /></button>
               </div>
               <div className="mt-12 flex items-center gap-5 border-t border-border pt-5 font-mono text-[9px] uppercase text-muted-foreground"><span>Research-led</span><span className="h-px w-8 bg-border" /><span>Product-minded</span><span className="h-px w-8 bg-border" /><span>Outcome-focused</span></div>
