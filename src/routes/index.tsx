@@ -187,31 +187,42 @@ function Index() {
       </header>
 
       <main>
-        <section id="home" className="editorial-grid relative flex min-h-[760px] scroll-mt-24 items-end border-b border-border px-5 pb-12 pt-32 md:min-h-[820px] md:px-10 md:pb-16 lg:h-[900px] lg:min-h-0 lg:px-16">
-          <div className="mx-auto grid w-full max-w-[1440px] items-end gap-10 lg:grid-cols-[1.45fr_.55fr]">
-            <div className="relative z-10">
-              <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase text-muted-foreground">
-                <span className="text-primary">Portfolio / 2026</span><span>Data science + product thinking</span><span className="flex items-center gap-1.5"><MapPin className="size-3" /> Tampa, Florida</span>
+        <section id="home" className="editorial-grid relative flex min-h-[760px] scroll-mt-24 items-center overflow-hidden border-b border-border px-5 pb-16 pt-28 md:min-h-[820px] md:px-10 lg:h-[900px] lg:min-h-0 lg:px-16">
+          <div className="pointer-events-none absolute inset-x-0 top-20 mx-auto hidden max-w-[1440px] justify-between px-2 font-mono text-[9px] uppercase text-muted-foreground/60 lg:flex">
+            <span>Portfolio / 2026</span><span>27.9506° N · 82.4572° W</span>
+          </div>
+          <div className="mx-auto grid w-full max-w-[1320px] items-center gap-14 lg:grid-cols-[1.38fr_.62fr] lg:gap-20">
+            <div className="relative z-10 reveal-up">
+              <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-border bg-background/80 px-4 py-2 backdrop-blur-sm">
+                <span className="relative flex size-2"><span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-50" /><span className="relative inline-flex size-2 rounded-full bg-primary" /></span>
+                <span className="font-mono text-[9px] uppercase text-muted-foreground">Tampa, Florida · Open to opportunities</span>
               </div>
-              <h1 className="max-w-5xl font-display text-[clamp(3.2rem,7.5vw,7.8rem)] font-semibold leading-[.93] text-foreground">
-                Turning data into <span className="text-primary">insights,</span> models, and things people can use.
+              <p className="mb-5 font-mono text-[10px] uppercase text-primary">Data Science · Analytics · Machine Learning · Forecasting</p>
+              <h1 className="max-w-4xl font-display text-[clamp(3.25rem,6.2vw,6.8rem)] font-semibold leading-[.94] text-foreground">
+                Turning data into <span className="italic text-primary">insights,</span> models, and things people can use.
               </h1>
-              <div className="mt-10 grid max-w-4xl gap-8 border-t border-border pt-6 md:grid-cols-[1fr_auto] md:items-end">
-                <div>
-                  <p className="mb-3 font-mono text-[11px] uppercase text-primary">Data Science · Analytics · ML · Forecasting</p>
-                  <p className="max-w-2xl text-base leading-7 text-ink-soft md:text-lg">Data Science graduate with a Computer Science background, interested in solving real-world problems through data, experimentation, and thoughtful technology.</p>
-                </div>
-                <div className="flex gap-3"><Button size="lg" onClick={() => scrollTo("projects")}>View my work <ArrowDownRight /></Button><Button variant="outline" size="lg" onClick={() => scrollTo("contact")}>Let’s connect</Button></div>
+              <p className="mt-8 max-w-2xl text-base leading-8 text-ink-soft md:text-lg">Data Science graduate with a Computer Science background, interested in solving real-world problems through data, experimentation, and thoughtful technology.</p>
+              <div className="mt-9 flex flex-wrap items-center gap-5">
+                <Button size="lg" className="rounded-full px-7" onClick={() => scrollTo("projects")}>View my work <ArrowDownRight /></Button>
+                <button onClick={() => scrollTo("about")} className="group inline-flex items-center gap-2 border-b border-foreground pb-1 font-mono text-[10px] uppercase text-foreground transition-colors hover:border-primary hover:text-primary">Read my story <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" /></button>
               </div>
+              <div className="mt-12 flex items-center gap-5 border-t border-border pt-5 font-mono text-[9px] uppercase text-muted-foreground"><span>Research-led</span><span className="h-px w-8 bg-border" /><span>Product-minded</span><span className="h-px w-8 bg-border" /><span>Outcome-focused</span></div>
             </div>
-            <div className="relative mx-auto w-full max-w-[390px] lg:mx-0">
-              <div className="absolute -left-5 -top-5 z-10 bg-primary px-3 py-2 font-mono text-[10px] uppercase text-primary-foreground">Open to opportunities</div>
-              <div className="relative aspect-[4/5] overflow-hidden border border-border bg-surface">
+
+            <div className="relative mx-auto w-full max-w-[410px] lg:mx-0">
+              <div className="absolute -inset-3 translate-x-3 translate-y-3 rounded-[1.5rem] border border-primary/30" />
+              <div className="group relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-border bg-surface-raised shadow-[0_24px_80px_-38px_color-mix(in_oklab,var(--foreground)_38%,transparent)]">
                 <DataPortrait />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-background/90 p-4 backdrop-blur-sm"><div><p className="font-display text-lg font-semibold">Anvitha Reddy</p><p className="font-mono text-[9px] uppercase text-muted-foreground">Data scientist / Analyst</p></div><span className="font-display text-4xl text-primary">AR</span></div>
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between border-t border-border bg-background/90 p-5 backdrop-blur-md"><div><p className="font-display text-xl font-semibold">Anvitha Reddy</p><p className="mt-1 font-mono text-[9px] uppercase text-muted-foreground">Data scientist / Analyst</p></div><span className="font-display text-4xl text-primary">AR</span></div>
               </div>
+              <div className="absolute -bottom-7 -left-7 hidden max-w-[210px] rounded-2xl border border-border bg-background p-5 shadow-xl md:block">
+                <p className="font-mono text-[9px] uppercase text-muted-foreground">Working across</p>
+                <p className="mt-2 text-xs font-medium leading-5 text-foreground">Forecasting, machine learning, research & product analytics</p>
+              </div>
+              <div className="absolute -right-5 top-10 rounded-full border border-border bg-background p-3 shadow-lg"><BarChart3 className="size-5 text-primary" /></div>
             </div>
           </div>
+          <button onClick={() => scrollTo("about")} className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-2 font-mono text-[9px] uppercase text-muted-foreground lg:flex">Scroll to explore <ArrowDownRight className="size-3" /></button>
         </section>
 
         <section id="about" className="scroll-mt-24 px-5 py-24 md:px-10 lg:px-16 lg:py-36">
@@ -301,7 +312,7 @@ function Education({ school, degree, dates, location, metric }: { school: string
 function ContactRow({ label, value, href, icon }: { label: string; value: string; href: string; icon: React.ReactNode }) { return <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group flex items-center gap-4 border-b border-primary-foreground/30 py-4">{icon}<div><p className="font-mono text-[9px] uppercase opacity-65">{label}</p><p className="break-all text-sm">{value}</p></div><ArrowRight className="ml-auto transition-transform group-hover:translate-x-2" /></a>; }
 
 function DataPortrait() {
-  return <div className="relative h-full w-full overflow-hidden bg-surface"><div className="absolute inset-0 editorial-grid opacity-60" /><svg aria-hidden="true" viewBox="0 0 400 500" className="absolute inset-0 h-full w-full text-primary"><path d="M-20 390 C 80 350, 80 180, 190 250 S 310 100, 430 120" fill="none" stroke="currentColor" strokeWidth="2" className="data-path"/><path d="M-20 420 C 90 350, 130 410, 220 300 S 320 260, 430 170" fill="none" stroke="currentColor" strokeWidth="1" opacity=".45"/><circle cx="190" cy="250" r="5" fill="currentColor" className="data-point"/><circle cx="310" cy="160" r="4" fill="currentColor" className="data-point"/><rect x="58" y="62" width="284" height="330" fill="none" stroke="currentColor" opacity=".2"/><text x="72" y="110" fill="currentColor" fontSize="62" fontFamily="Syne" fontWeight="600">AR</text><text x="74" y="138" fill="currentColor" fontSize="9" fontFamily="DM Mono">DATA / QUESTIONS / IMPACT</text></svg><div className="absolute bottom-24 right-5 font-mono text-[9px] uppercase text-muted-foreground [writing-mode:vertical-rl]">Profile image ready</div></div>;
+  return <div className="relative h-full w-full overflow-hidden bg-surface"><div className="absolute inset-0 editorial-grid opacity-45" /><div className="absolute left-7 right-7 top-7 flex items-center justify-between border-t border-border pt-3 font-mono text-[8px] uppercase text-muted-foreground"><span>Profile / 001</span><span>Data + products</span></div><svg aria-hidden="true" viewBox="0 0 400 500" className="absolute inset-0 h-full w-full text-primary"><circle cx="200" cy="225" r="118" fill="none" stroke="currentColor" opacity=".12"/><circle cx="200" cy="225" r="86" fill="none" stroke="currentColor" opacity=".12"/><path d="M-20 390 C 80 350, 80 180, 190 250 S 310 100, 430 120" fill="none" stroke="currentColor" strokeWidth="2" className="data-path"/><path d="M-20 420 C 90 350, 130 410, 220 300 S 320 260, 430 170" fill="none" stroke="currentColor" strokeWidth="1" opacity=".45"/><circle cx="190" cy="250" r="5" fill="currentColor" className="data-point"/><circle cx="310" cy="160" r="4" fill="currentColor" className="data-point"/><text x="55" y="250" fill="currentColor" fontSize="128" fontFamily="Syne" fontWeight="600" opacity=".9">AR</text><text x="98" y="280" fill="currentColor" fontSize="9" fontFamily="DM Mono">DATA / QUESTIONS / IMPACT</text></svg><div className="absolute bottom-24 right-5 font-mono text-[8px] uppercase text-muted-foreground [writing-mode:vertical-rl]">Portrait ready / 2026</div></div>;
 }
 
 function ProjectVisual({ type, number }: { type: string; number: string }) {
