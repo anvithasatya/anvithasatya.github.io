@@ -69,7 +69,7 @@ const projects = [
     categories: ["Analytics", "Machine Learning"],
     problem: "How can industrial energy data reveal what drives consumption and where operational behavior becomes unusual?",
     summary: "A combined forecasting, clustering, and anomaly-detection workflow for steel-production energy use.",
-    stats: ["Forecast", "Discover", "Detect"],
+    stats: ["Forecasting", "Clustering", "Anomaly Detection"],
     tools: "Python · Pandas · Regression · Clustering · Anomaly Detection · Data Mining",
     steps: ["Industrial data preparation", "Consumption pattern exploration", "Regression forecasting", "Operational clustering", "Anomaly detection and interpretation"],
     insight: "Combining multiple analytical lenses made the result more useful: forecast what comes next, discover operating modes, then detect exceptions.",
