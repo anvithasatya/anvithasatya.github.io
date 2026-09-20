@@ -187,7 +187,7 @@ function Index() {
       </header>
 
       <main>
-        <section id="home" className="editorial-grid relative flex min-h-[94vh] scroll-mt-24 items-end border-b border-border px-5 pb-12 pt-32 md:px-10 md:pb-16 lg:px-16">
+        <section id="home" className="editorial-grid relative flex min-h-[760px] scroll-mt-24 items-end border-b border-border px-5 pb-12 pt-32 md:min-h-[820px] md:px-10 md:pb-16 lg:h-[900px] lg:min-h-0 lg:px-16">
           <div className="mx-auto grid w-full max-w-[1440px] items-end gap-10 lg:grid-cols-[1.45fr_.55fr]">
             <div className="relative z-10">
               <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase text-muted-foreground">
