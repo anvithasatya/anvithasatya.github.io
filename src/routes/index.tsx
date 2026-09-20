@@ -213,7 +213,7 @@ function Index() {
             <div className="relative mx-auto w-full max-w-[410px] lg:mx-0">
               <div className="absolute -inset-3 translate-x-3 translate-y-3 rounded-[1.5rem] border border-primary/30" />
               <div className="group relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-border bg-surface-raised shadow-[0_24px_80px_-38px_color-mix(in_oklab,var(--foreground)_38%,transparent)]">
-                <DataPortrait />
+                <img src="/profile.jpeg" alt="Anvitha Reddy" className="h-full w-full object-cover object-top"/>
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between border-t border-border bg-background/90 p-5 backdrop-blur-md"><div><p className="font-display text-xl font-semibold">Anvitha Reddy</p><p className="mt-1 font-mono text-[9px] uppercase text-muted-foreground">Data scientist / Analyst</p></div><span className="font-display text-4xl text-primary">AR</span></div>
               </div>
               <div className="absolute -bottom-7 -left-7 hidden max-w-[210px] rounded-2xl border border-border bg-background p-5 shadow-xl md:block">
